@@ -166,15 +166,15 @@ export default function Page() {
         <div className="flex gap-2 flex-wrap">
           <button
             onClick={exportToExcel}
-            className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+            className="w-32 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition text-center"
           >
-            Export ke Excel
+            Export Excel
           </button>
           <button
             onClick={exportToPDF}
-            className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition"
+            className="w-32 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition text-center"
           >
-            Export ke PDF
+            Export PDF
           </button>
         </div>
       </div>
