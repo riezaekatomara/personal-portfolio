@@ -168,3 +168,19 @@ a:hover {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Sidebar open/close - tanpa tailwind.config.js */
+.sidebar-open {
+  transform: translateX(0);
+}
+
+.sidebar-closed {
+  transform: translateX(-100%);
+}
+
+@media (min-width: 1024px) {
+  .sidebar-open,
+  .sidebar-closed {
+    transform: none !important;
+  }
+}
