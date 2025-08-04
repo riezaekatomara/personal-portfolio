@@ -227,7 +227,7 @@ export default function LanyardCard() {
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-1 justify-center">
-                  {["Tailwind", "Supabase"].map((tech) => (
+                  {["Tailwind CSS", "Supabase"].map((tech) => (
                     <span
                       key={tech}
                       className="px-1.5 py-0.5 bg-white/60 text-green-700 rounded text-xs font-medium border border-green-200"

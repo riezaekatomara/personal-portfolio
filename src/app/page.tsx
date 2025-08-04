@@ -56,7 +56,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text Content */}
             <motion.div
-              className="text-center lg:text-left space-y-8"
+              className="relative top-3 text-center lg:text-left space-y-8"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -98,8 +98,8 @@ export default function Home() {
                   <span className="text-blue-600 font-semibold">
                     Sistem Informasi
                   </span>{" "}
-                  yang fokus pada pengembangan web aplikasi kampus dan IT
-                  support.
+                  yang berdedikasi dalam mengembangkan solusi web inovatif dan
+                  memberikan dukungan IT profesional.
                 </p>
 
                 <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
@@ -107,13 +107,13 @@ export default function Home() {
                     "TypeScript",
                     "React",
                     "Next.js",
-                    "Tailwind",
+                    "Tailwind CSS",
                     "Supabase",
                     "PostgreSQL",
                   ].map((tech, index) => (
                     <motion.span
                       key={tech}
-                      className="px-3 py-1 text-sm bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full border border-blue-200/50 font-medium"
+                      className="px-3 py-1 text-sm bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full border border-blue-200/50 font-medium whitespace-nowrap"
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
@@ -191,7 +191,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Projects Section with improved spacing */}
+      {/* Projects Section dengan struktur yang lebih baik */}
       <section className="py-24 px-6 relative">
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -207,38 +207,43 @@ export default function Home() {
               ease: "easeInOut",
             }}
           />
-          <motion.div
-            className="absolute bottom-1/3 left-1/3 w-80 h-80 bg-gradient-to-br from-blue-400/8 to-purple-400/5 rounded-full blur-3xl"
-            animate={{
-              scale: [1.2, 1, 1.2],
-              rotate: [180, 0, 180],
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 3,
-            }}
-          />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          {/* Header Section - Diperbaiki */}
+          <motion.div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
-              Projects & Portfolio
+              My Portfolio
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Berikut adalah beberapa project yang telah saya kerjakan dalam
-              pengembangan web aplikasi dan sistem informasi
+              Kumpulan karya dan project unggulan yang menunjukkan keahlian saya
+              dalam pengembangan web modern dan sistem informasi.
             </p>
+
+            {/* Stats badges */}
+            <div className="flex flex-wrap justify-center gap-6 mt-8">
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-white/30">
+                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                <span className="text-sm font-medium text-gray-700">
+                  Full-Stack Developer
+                </span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-white/30">
+                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span className="text-sm font-medium text-gray-700">
+                  Modern Tech Stack
+                </span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-white/30">
+                <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                <span className="text-sm font-medium text-gray-700">
+                  System Information Graduate
+                </span>
+              </div>
+            </div>
           </motion.div>
 
+          {/* Projects List */}
           <ProjectList />
         </div>
       </section>
