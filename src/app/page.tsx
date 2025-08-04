@@ -56,7 +56,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text Content */}
             <motion.div
-              className="relative top-3 text-center lg:text-left space-y-8"
+              className="relative top-5 text-center lg:text-left space-y-8"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
