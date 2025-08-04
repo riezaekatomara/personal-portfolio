@@ -3,7 +3,7 @@
 import LanyardCard from "@/../../components/LanyardCard";
 import ProjectList from "@/../../components/ProjectList";
 import { motion } from "framer-motion";
-import { ArrowDown, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react"; // Removed ArrowDown
 
 export default function Home() {
   return (

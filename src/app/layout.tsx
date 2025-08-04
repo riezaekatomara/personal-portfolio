@@ -34,20 +34,6 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="id" className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-        <meta name="theme-color" content="#3B82F6" />
-        <meta name="color-scheme" content="light" />
-      </head>
       <body className="min-h-screen flex flex-col font-inter bg-gradient-to-br from-slate-50 via-blue-50/20 to-cyan-50/30 text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900">
         {/* Background Pattern */}
         <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -97,20 +83,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <div className="w-1 h-4 bg-slate-300 rounded-full" />
           </div>
         </div>
-
-        {/* Performance optimization */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Preload critical resources
-              const link = document.createElement('link');
-              link.rel = 'preload';
-              link.href = '/foto.jpg';
-              link.as = 'image';
-              document.head.appendChild(link);
-            `,
-          }}
-        />
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Eye } from "lucide-react";
+import { Github, Eye } from "lucide-react"; // Removed ExternalLink
 import { useRouter } from "next/navigation";
 
 interface ProjectLink {
@@ -67,14 +67,7 @@ export default function ProjectList() {
     try {
       if (link.internal) {
         console.log("Attempting internal navigation to:", link.url);
-
-        // Tambahkan delay kecil untuk debugging
-        setTimeout(() => {
-          router.push(link.url);
-        }, 100);
-
-        // Alternative: gunakan window.location jika router tidak bekerja
-        // window.location.href = link.url;
+        router.push(link.url);
       } else {
         if (!link.url || link.url === "#" || link.url === "") {
           alert("Link belum tersedia. Silakan cek kembali nanti.");
@@ -84,7 +77,6 @@ export default function ProjectList() {
       }
     } catch (error) {
       console.error("Error handling link:", error);
-      // Fallback to window.location
       if (link.internal) {
         window.location.href = link.url;
       } else {
