@@ -3,13 +3,13 @@
 import LanyardCard from "@/../../components/LanyardCard";
 import ProjectList from "@/../../components/ProjectList";
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react"; // Removed ArrowDown
+import { Sparkles } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section with improved layout */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
+      {/* Hero Section with spacing fix for navbar */}
+      <section className="min-h-screen pt-24 md:pt-32 flex flex-col items-center justify-center px-6 relative overflow-hidden">
         {/* Enhanced Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
@@ -52,7 +52,7 @@ export default function Home() {
         </div>
 
         {/* Main Content Container */}
-        <div className="relative z-10 max-w-6xl mx-auto w-full">
+        <div className="relative bottom-5 md:bottom-10 z-10 max-w-6xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text Content */}
             <motion.div
@@ -191,9 +191,8 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Projects Section dengan struktur yang lebih baik */}
+      {/* Projects Section */}
       <section className="py-24 px-6 relative">
-        {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             className="absolute top-1/3 right-1/3 w-72 h-72 bg-gradient-to-br from-emerald-400/10 to-teal-400/5 rounded-full blur-3xl"
@@ -210,7 +209,6 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
-          {/* Header Section - Diperbaiki */}
           <motion.div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
               My Portfolio
@@ -220,7 +218,6 @@ export default function Home() {
               dalam pengembangan web modern dan sistem informasi.
             </p>
 
-            {/* Stats badges */}
             <div className="flex flex-wrap justify-center gap-6 mt-8">
               <div className="flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-white/30">
                 <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
@@ -243,7 +240,6 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Projects List */}
           <ProjectList />
         </div>
       </section>

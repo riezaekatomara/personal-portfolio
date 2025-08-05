@@ -192,7 +192,7 @@ export default function LanyardCard() {
           >
             {/* Education */}
             <motion.div
-              className="flex items-center justify-center gap-2 p-1.5 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-md border border-blue-100"
+              className="flex items-center md:mr-0.5 justify-center gap-2 p-1.5 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-md border border-blue-100"
               whileHover={{ scale: 1.02 }}
             >
               <GraduationCap
